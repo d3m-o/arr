@@ -80,8 +80,7 @@ services:
     volumes:
       - /docker/appdata/sonarr/config:/config
       - /docker/appdata/sonarr/data/backup:/data/backup
-      - {{"Enter the location of your shows folder"}}:/data/shows
-      - {{"Enter the location of your downloads folder"}}:/data/downloads
+      - {{"Enter the location of your data folder"}}:/data
     restart: unless-stopped
 
   radarr:
@@ -95,8 +94,7 @@ services:
     volumes:
       - /docker/appdata/radarr/config:/config
       - /docker/appdata/radarr/data/backup:/data/backup
-      - {{"Enter the location of your movies folder"}}:/data/movies
-      - {{"Enter the location of your downloads folder"}}:/data/downloads
+      - {{"Enter the location of your data folder"}}:/data
     restart: unless-stopped
 
   prowlarr:
@@ -110,7 +108,6 @@ services:
     volumes:
       - /docker/appdata/prowlarr/config:/config
       - /docker/appdata/prowlarr/data/backup:/data/backup
-      - {{"Enter the location of your downloads folder"}}:/data/downloads
     restart: unless-stopped
 
   flaresolverr:
